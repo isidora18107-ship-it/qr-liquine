@@ -6,124 +6,128 @@
   <title>Contacto</title>
 
   <style>
-    * {
+    *{
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      margin: 0;
-      padding: 20px;
+    html, body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
+    }
 
-      /* Fondo */
-      background-image: url('img/fondo.png');
+    body{
+      background-image: url('img/fondo.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
-
-      min-height: 100vh;
 
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* Oscurece un poco el fondo para que se lea mejor */
-    /* .overlay {
+    /* Capa oscura */
+    .overlay{
       width: 100%;
-      min-height: 100vh;
-      background: rgba(0, 0, 0, 0.35);
+      height: 100%;
+
+      background: rgba(0,0,0,0.35);
 
       display: flex;
       justify-content: center;
       align-items: center;
-
-      padding: 20px;
-    } */
-
-    .wrapper {
-      width: 100%;
-      max-width: 420px;
-    }
-
-    .contenedor {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(4px);
-
-      padding: 25px;
-      border-radius: 18px;
-
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    .boton {
-      display: block;
-      width: 100%;
 
       padding: 15px;
-      margin-top: 12px;
+    }
+
+    .wrapper{
+      width: 100%;
+      max-width: 420px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contenedor{
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(5px);
+
+      border-radius: 18px;
+
+      padding: 22px;
+
+      text-align: center;
+
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    }
+
+    h1{
+      font-size: 22px;
+      color: #222;
+      margin-bottom: 18px;
+    }
+
+    .boton{
+      display: block;
+
+      width: 100%;
 
       text-decoration: none;
+
       color: white;
+
+      padding: 14px;
+
+      margin-top: 12px;
 
       border-radius: 12px;
 
-      font-size: 17px;
+      font-size: 16px;
       font-weight: bold;
 
-      transition: 0.2s ease;
+      transition: 0.2s;
     }
 
-    .boton:active {
+    .boton:active{
       transform: scale(0.97);
     }
 
-    .whatsapp {
+    .whatsapp{
       background: #25D366;
     }
 
-    .correo {
+    .correo{
       background: #0078D7;
     }
 
-    .llamada {
+    .llamada{
       background: #ff5722;
     }
 
-    @media (max-width: 480px) {
+    /* Ajustes celulares pequeños */
+    @media (max-height: 700px){
 
-      body {
-        padding: 0;
+      .contenedor{
+        padding: 18px;
       }
 
-      .overlay {
-        padding: 15px;
+      h1{
+        font-size: 19px;
+        margin-bottom: 14px;
       }
 
-      .contenedor {
-        padding: 20px;
-        border-radius: 16px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      .boton {
-        font-size: 16px;
-        padding: 14px;
+      .boton{
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 10px;
       }
     }
+
   </style>
 </head>
 
@@ -134,6 +138,7 @@
     <div class="wrapper">
 
       <div class="contenedor">
+
         <h1>Reserva Liquiñe</h1>
 
         <a class="boton whatsapp"
@@ -145,9 +150,11 @@
            href="mailto:reservaliquine@gmail.com">
           Correo
         </a>
+
       </div>
 
       <div class="contenedor">
+
         <h1>Reserva Cabañas Talchuano</h1>
 
         <a class="boton llamada"
@@ -159,6 +166,7 @@
            href="mailto:rjaraf@armada.cl">
           Correo
         </a>
+
       </div>
 
     </div>
