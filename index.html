@@ -6,38 +6,52 @@
   <title>Contacto</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 20px;
       background: #f4f4f4;
       font-family: Arial, sans-serif;
     }
 
+    .wrapper {
+      max-width: 400px;
+      margin: auto;
+    }
+
     .contenedor {
-      text-align: center;
       background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 25px;
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #222;
     }
 
     .boton {
       display: block;
-      width: 220px;
-      margin: 10px auto;
+      width: 100%;
       padding: 15px;
+      margin-top: 12px;
       text-decoration: none;
       color: white;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: 0.2s;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .boton:active {
+      transform: scale(0.98);
     }
 
     .whatsapp {
@@ -48,47 +62,63 @@
       background: #0078D7;
     }
 
-    .boton:hover {
-      opacity: 0.9;
-      transform: scale(1.03);
-    }
-
     .llamada {
       background: #ff5722;
     }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+
+      .contenedor {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .boton {
+        font-size: 16px;
+        padding: 14px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="contenedor">
-    <h1>Reserva Liquiñe</h1>
+  <div class="wrapper">
 
-    <!-- Reemplaza el número -->
-    <a class="boton whatsapp" 
-       href="https://wa.me/56981971981">
-      WhatsApp
-    </a>
+    <div class="contenedor">
+      <h1>Reserva Liquiñe</h1>
 
-    <!-- Reemplaza el correo -->
-    <a class="boton correo" 
-       href="mailto:reservaliquine@gmail.com">
-      Correo
-    </a>
-  </div>
+      <a class="boton whatsapp"
+         href="https://wa.me/56981971981">
+        WhatsApp
+      </a>
 
-  <div class="contenedor">
-    <h1>Reserva Cabañas Talchuano</h1>
+      <a class="boton correo"
+         href="mailto:reservaliquine@gmail.com">
+        Correo
+      </a>
+    </div>
 
-    <!-- Reemplaza el número -->
-    <a class="boton llamada" href="tel:412745587">
-      Teléfono Fijo
-    </a>
+    <div class="contenedor">
+      <h1>Reserva Cabañas Talchuano</h1>
 
-    <!-- Reemplaza el correo -->
-    <a class="boton correo" 
-       href="mailto:rjaraf@armada.cl">
-      Correo
-    </a>
+      <a class="boton llamada"
+         href="tel:+56412745587">
+        Teléfono Fijo
+      </a>
+
+      <a class="boton correo"
+         href="mailto:rjaraf@armada.cl">
+        Correo
+      </a>
+    </div>
+
   </div>
 
 </body>
