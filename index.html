@@ -13,20 +13,49 @@
     body {
       margin: 0;
       padding: 20px;
-      background: #f4f4f4;
       font-family: Arial, sans-serif;
+
+      /* Fondo */
+      background-image: url('img/fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    /* Oscurece un poco el fondo para que se lea mejor */
+    /* .overlay {
+      width: 100%;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.35);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+    } */
+
     .wrapper {
-      max-width: 400px;
-      margin: auto;
+      width: 100%;
+      max-width: 420px;
     }
 
     .contenedor {
-      background: white;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(4px);
+
       padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 18px;
+
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+
       margin-bottom: 20px;
       text-align: center;
     }
@@ -40,18 +69,23 @@
     .boton {
       display: block;
       width: 100%;
+
       padding: 15px;
       margin-top: 12px;
+
       text-decoration: none;
       color: white;
-      border-radius: 10px;
+
+      border-radius: 12px;
+
       font-size: 17px;
       font-weight: bold;
+
       transition: 0.2s ease;
     }
 
     .boton:active {
-      transform: scale(0.98);
+      transform: scale(0.97);
     }
 
     .whatsapp {
@@ -67,12 +101,18 @@
     }
 
     @media (max-width: 480px) {
+
       body {
+        padding: 0;
+      }
+
+      .overlay {
         padding: 15px;
       }
 
       .contenedor {
         padding: 20px;
+        border-radius: 16px;
       }
 
       h1 {
@@ -89,34 +129,38 @@
 
 <body>
 
-  <div class="wrapper">
+  <div class="overlay">
 
-    <div class="contenedor">
-      <h1>Reserva Liquiñe</h1>
+    <div class="wrapper">
 
-      <a class="boton whatsapp"
-         href="https://wa.me/56981971981">
-        WhatsApp
-      </a>
+      <div class="contenedor">
+        <h1>Reserva Liquiñe</h1>
 
-      <a class="boton correo"
-         href="mailto:reservaliquine@gmail.com">
-        Correo
-      </a>
-    </div>
+        <a class="boton whatsapp"
+           href="https://wa.me/56981971981">
+          WhatsApp
+        </a>
 
-    <div class="contenedor">
-      <h1>Reserva Cabañas Talchuano</h1>
+        <a class="boton correo"
+           href="mailto:reservaliquine@gmail.com">
+          Correo
+        </a>
+      </div>
 
-      <a class="boton llamada"
-         href="tel:412745587">
-        Teléfono Fijo
-      </a>
+      <div class="contenedor">
+        <h1>Reserva Cabañas Talchuano</h1>
 
-      <a class="boton correo"
-         href="mailto:rjaraf@armada.cl">
-        Correo
-      </a>
+        <a class="boton llamada"
+           href="tel:+56412745587">
+          Teléfono Fijo
+        </a>
+
+        <a class="boton correo"
+           href="mailto:rjaraf@armada.cl">
+          Correo
+        </a>
+      </div>
+
     </div>
 
   </div>
