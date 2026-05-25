@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .contenedor {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    .boton {
+      display: block;
+      width: 220px;
+      margin: 10px auto;
+      padding: 15px;
+      text-decoration: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    .correo {
+      background: #0078D7;
+    }
+
+    .boton:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Contáctame</h1>
+
+    <!-- Reemplaza el número -->
+    <a class="boton whatsapp" 
+       href="https://wa.me/56981971981">
+      WhatsApp
+    </a>
+
+    <!-- Reemplaza el correo -->
+    <a class="boton correo" 
+       href="mailto:reservaliquine@gmail.com">
+      Correo
+    </a>
+  </div>
+
+</body>
+</html>
